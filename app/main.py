@@ -24,10 +24,10 @@ app.add_middleware(CORSMiddleware, allow_origins=origins, allow_credentials=True
         print('Failed')
         print(error)
         time.sleep(2)"""
-#put "uvicorn messaging_app.main:app --reload" in terminal(remove "")
+#put "uvicorn app.main:app --reload" in terminal(remove "")
 #uvicorn is the needed package
 #main is the file name
-#messaging_app is the variable name
+#app is the variable name
 # --reload tells it to automatically reload
 # put it ONLY in the terminal for THIS venv
 
