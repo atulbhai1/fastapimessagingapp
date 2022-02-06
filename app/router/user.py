@@ -2,6 +2,7 @@ from .. import models, schemas, utils
 from fastapi import FastAPI, Response, status, HTTPException, Depends, APIRouter
 from sqlalchemy.orm import Session
 from ..database import get_db
+from typing import List
 router = APIRouter(prefix="/users", tags=["Users"])
 @router.get("/", response_model=List[schemas.UserOut])
 def get_all_users(db: Session = Depends(get_db)):
