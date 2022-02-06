@@ -37,7 +37,7 @@ app.include_router(auth.router)
 app.include_router(vote.router)
 @app.get("/")
 def root():
-    return {"message": "Hello Guys!!!"}
+    return {"message": "Hello guys!!! This is my messaging app. To use it, go to the /docs part of this website. Do this by going to the end of this URL and typing /docs. The code is on my github"}
 
 # go to /docs for documentation!!!
 
