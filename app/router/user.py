@@ -17,3 +17,7 @@ def get_user(id: int, db: Session = Depends(get_db)):
     if not user:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"User With ID :{id} Was Not Found")
     return user
+@router.get("/", response_model=List[schemas.UserOut])
+def get_all_users(db: Session = Depends(get_db)):
+    users = db.query(models.User).all()
+    return users
